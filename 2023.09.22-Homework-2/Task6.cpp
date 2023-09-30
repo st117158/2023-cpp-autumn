@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main ( int argc , char * )
+int main ( int argc, char * )
 {
     int k = 0;
     int m = 0;
@@ -8,15 +8,20 @@ int main ( int argc , char * )
     std::cin >> k;
     std::cin >> m;
     std::cin >> n;
-    int T = 0;
-    int r = 2*n/k;
-    if ( n <= k) {
-            T = m * 2;
-    } else if ( n*2 % k == 0){
-        T=r*m;
-    } else {
-        T = (r + 1)*m;
+    int time = 0;
+    2 * n / k;
+    if ( n <= k)
+    {
+        time = m * 2;
     }
-    std::cout << T;
+    else if ( n * 2 % k == 0)
+    {
+        time = (2 * n / k) * m;
+    }
+    else
+    {
+        time = ( (2 * n / k) + 1) * m;
+    }
+    std::cout << time;
     return  EXIT_SUCCESS;
 }
