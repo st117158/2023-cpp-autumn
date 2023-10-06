@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main ( int argc, char* argv[])
+int main (int argc, char* argv[])
 {
     int n = 0;
     int Price1 = 15;
@@ -10,7 +10,7 @@ int main ( int argc, char* argv[])
     int Price60 = 440;
     std::cin >> n;
     int count60 = n / 60;
-    int n1 = n% 60;
+    int n1 = n % 60;
     int count20 = n1 / 20;
     int n2 = n1 % 20;
     int count10 = n2 / 10;

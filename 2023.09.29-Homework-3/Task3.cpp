@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main ( int argc, char* argv[])
+int main (int argc, char* argv[])
 {
     int x = 0;
     std::cin >> x;
@@ -16,9 +16,9 @@ int main ( int argc, char* argv[])
     }
     if (i * i == x)
     {
-        k = k + 1 ;
+        k = k + 1;
     }
 
-    std::cout << k ;
+    std::cout << k;
     return EXIT_SUCCESS;
 }

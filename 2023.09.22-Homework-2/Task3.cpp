@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main ( int argc, char* argv[])
+int main (int argc, char* argv[])
 {
     int a = 0;
     int b = 0;
@@ -15,13 +15,13 @@ int main ( int argc, char* argv[])
     {
         std::cout << "INF";
     }
-    else if ( (a == 0 ) || (c * x + d == 0))
+    else if ((a == 0) || (c * x + d == 0))
     {
         std::cout << "NO";
     }
     else if ((b % a == 0))
     {
-        std::cout << x ;
+        std::cout << x;
     }
     else
     {
