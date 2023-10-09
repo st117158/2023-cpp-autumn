@@ -16,11 +16,11 @@ int main(int argc, char**)
 
 	for (int i = 0; i < n; ++i)
     {
-        if (*(a + i) >= 0)
-        {
-            *(a + k) = *(a + i);
-            k++;
-        }
+         if (*(a + i) >= 0)
+         {
+             *(a + k) = *(a + i);
+             k++;
+         }
     }
     n = k;
     a = (int*)realloc(a, sizeof(int) * n);
