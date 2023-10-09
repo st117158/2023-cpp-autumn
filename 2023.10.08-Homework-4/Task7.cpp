@@ -26,9 +26,9 @@ int main(int argc, char**)
     a = (int*)realloc(a, sizeof(int) * n);
 
     for (int i = 0; i < n; ++i)
-	{
-		std::cout << *(a + i) << " ";
-	}
+    {
+       std::cout << *(a + i) << " ";
+    }
 	free(a);
 
     return EXIT_SUCCESS;
