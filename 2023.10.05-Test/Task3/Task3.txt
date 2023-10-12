@@ -1,0 +1,7 @@
+при условии, что мы уже нашли наш репозиторий на компьютере 
+
+git rm (  файл ) или  *.txt ( значит удалить все файлы txt)
+
+git commit --all --message " txt files cleanup " ( на примере txt)
+
+git push 
