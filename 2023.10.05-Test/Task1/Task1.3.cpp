@@ -1,6 +1,6 @@
 #include<iostream>
 
-int main(int argc, char argv[])
+int main(int argc, char* argv[])
 {
     unsigned short a = 0;
     unsigned short b = 0;
