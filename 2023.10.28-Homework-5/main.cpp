@@ -10,12 +10,12 @@ int main(int argc, char* argv[])
 
 	while (!exit)
 	{
-		{
-			system("cls");
-			PrintMenu();
-			print_array(a, len);
 
-		}
+       {
+           system("cls");
+           PrintMenu();
+           print_array(a, len);
+       }
 
 		int choise = 0;
 		std::cin >> choise;
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
 		}
 		case(5):
 		{
-			reverse_massive(a, len);
+			a = reverse_massive(a, len);
 			break;
 		}
 		case(6):

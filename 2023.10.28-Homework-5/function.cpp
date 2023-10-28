@@ -59,6 +59,7 @@ void delete_element(int*& a, int& len, int& c)
 		}
 		for (int j = c; j < len - 1; ++j)
 		{
+
 			new_a[j] = a[j + 1];
 		}
 		delete[] a;
@@ -66,6 +67,7 @@ void delete_element(int*& a, int& len, int& c)
 		--len;
 	}
     else
+
 	{
 		std::cout << "EMPTY" << std::endl;
 	}
@@ -99,21 +101,28 @@ void sort_massive(int*& a, int& len)
 	}
 }
 
-void reverse_massive(int*& a, int& len)
+int* reverse_massive(int*& a, int& len)
 {
     if (a == nullptr)
     {
         std::cout << "EMPTY";
+        return a;
     }
     else
     {
+        int* new_a = new int[len];
         for(int i = 0; i < len; ++i)
         {
-            std::cout << a[len - i - 1] << " ";
+            new_a[i] = a[len - i - 1];
+        }
+        for(int i = 0; i < len; ++i)
+        {
+            std::cout << new_a[i] << " ";
         }
         std::cout << std::endl;
+        delete[] a;
+        return new_a;
     }
-    delete[] a;
 }
 
 void change_max_min(int*& a, int& len)
@@ -140,7 +149,6 @@ void change_max_min(int*& a, int& len)
             {
                 std::cout << a[i] << " ";
             }
-        delete[] a;
     }
     else
     {
