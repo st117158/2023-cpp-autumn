@@ -16,11 +16,11 @@ int main(int argc, char**)
 
 	for (int i = 0; i < n; ++i)
 	{
-		if (*(a + i) >= *(a + max_value))
+		if (*(a + i) > *(a + max_value))
 		{
 			max_value = i;
 		}
-		if (*(a + i) < *(a + min_value))
+		if (*(a + i) <= *(a + min_value))
 		{
 			min_value = i;
 		}
