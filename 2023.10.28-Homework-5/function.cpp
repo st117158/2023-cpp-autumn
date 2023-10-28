@@ -85,7 +85,7 @@ void sort_massive(int*& a, int& len)
                         int c = a[j];
                         a[j] = a[j + 1];
                         a[j + 1] = c;
-                        }
+                    }
                 }
             }
             for (int i = 0; i < len; ++i)
@@ -139,7 +139,7 @@ void change_max_min(int*& a, int& len)
         for (int i = 0; i < len; ++i)
             {
                 std::cout << a[i] << " ";
-        }
+            }
         delete[] a;
     }
     else
