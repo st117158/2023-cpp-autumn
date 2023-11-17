@@ -14,7 +14,7 @@ void gnomeSort(int* a, int len);
 void countSort(int* a, int len);
 
 
-int main (int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	srand(time(0));
 	int n = 10;
@@ -146,11 +146,11 @@ void insertionSort(int * a, int len)
 {
 	for (int i = 1; i < len; ++i)
 	{
-		int t = i;
-		while (t > 0 && a[t] < a[t - 1])
+		int b = i;
+		while (b > 0 && a[b] < a[b - 1])
 		{
-			std::swap(a[t], a[t - 1]);
-			--t;
+			std::swap(a[b], a[b - 1]);
+			--b;
 		}
 	}
 }
