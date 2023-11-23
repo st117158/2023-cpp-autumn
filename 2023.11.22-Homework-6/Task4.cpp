@@ -12,7 +12,7 @@ void notfaire_h(int n, int i, int l)
         notfaire_h(n - 1, i, l);
         std::cout << n << " " << i << " " << k << std::endl;
         notfaire_h(n - 1, l, i);
-        std::cout << n << " " << l << " " << l << std::endl;
+        std::cout << n << " " << k << " " << l << std::endl;
         notfaire_h(n - 1, i, l);
     }
 }
