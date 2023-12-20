@@ -16,6 +16,7 @@ char* my_strmult(char* a, int num)
 	}
 	printf("%s", newstr);
 	return newstr;
+	free(newstr);
 }
 
 

@@ -13,6 +13,7 @@ char* my_substr(char* str, int start, int len)
         sub[i - start] = str[i];
     }
     return sub;
+    free(sub);
 }
 
 int main(int argc, char* argv[])
