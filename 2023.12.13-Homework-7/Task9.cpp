@@ -20,7 +20,7 @@ std::string palindrom(std::string l)
 }
 
 
-int main(int argc, char argv[])
+int main(int argc, char* argv[])
 {
     std::ifstream f;
     f.open("in.txt");
