@@ -62,7 +62,9 @@ public:
 
         bool result = false;
         if(size_g - sum > 1)
+        {
             result = true;
+        }
 
         delete[] visit;
 
@@ -81,13 +83,13 @@ public:
         return count;
     }
     ~CGraph()
-{
-    for(int i = 0; i <= size_g; ++i)
     {
-        delete[] matrix[i];
+        for(int i = 0; i <= size_g; ++i)
+        {
+            delete[] matrix[i];
+        }
+        delete[] matrix;
     }
-    delete[] matrix;
-}
 };
 CGraph::CGraph() : size_g(0), matrix(nullptr) {}
 
