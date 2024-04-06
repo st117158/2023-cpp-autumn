@@ -7,7 +7,7 @@ private:
     int n;
 
 public :
-    CGraph(int k = 0) : n(k) {}
+    CGraph(int k) : n(k) {}
 
     int findancestor(int species1, int species2)
     {

@@ -6,7 +6,7 @@ struct Cgraph
     int n;
     int** roads;
 
-    Cgraph(int k = 0) : n(k)
+    Cgraph(int k) : n(k)
     {
         roads = new int*[n];
         for(int i = 0; i < n; ++i)

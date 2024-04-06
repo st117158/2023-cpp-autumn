@@ -14,7 +14,7 @@ private:
     int** edge;
 
 public:
-    CGraph(int k = 0) : n(k)
+    CGraph(int k) : n(k)
     {
         edge = new int*[n + 1];
         for(int i = 0; i <= n; ++i)

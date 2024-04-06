@@ -8,7 +8,7 @@ private:
     int** distance;
 
 public:
-    CGraph(int k = 0) : n(k)
+    CGraph(int k) : n(k)
     {
         distance = new int*[n];
         for(int i = 0; i < n; ++i)

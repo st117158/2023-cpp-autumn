@@ -14,7 +14,7 @@ private:
     h* hills;
 
 public:
-    CGraph(int k = 0) : n(k)
+    CGraph(int k) : n(k)
     {
         bridges = new int*[n];
         for(int i = 0; i < n; ++i)

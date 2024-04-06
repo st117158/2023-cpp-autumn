@@ -9,7 +9,7 @@ private:
     int** matrix;
 
 public:
-    CGraph(int k = 0) : n(k)
+    CGraph(int k) : n(k)
     {
         matrix = new int* [n];
         for (int i = 0; i < n; ++i)
