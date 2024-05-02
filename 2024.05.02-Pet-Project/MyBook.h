@@ -9,6 +9,8 @@ using namespace std;
 class MyBook
 {
 public:
+    SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	std::string book_name;
 	std::string author;
 	std::string genre;
@@ -29,9 +31,9 @@ public:
 	void PrintBookInfo1(std::ostream& out_stream);
 	void PrintBookImp(std::ostream& out_stream);
 
-	
 
-	
+
+
 };
 
 

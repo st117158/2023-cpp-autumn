@@ -1,5 +1,7 @@
 #include "MyBook.h"
 using namespace std;
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
 
 
 void MyBook::inputbook()
@@ -21,7 +23,7 @@ void MyBook::inputbook()
 	rating = TestRating(new_rating);
 };
 
-string MyBook::TestRating(string new_rating) 
+string MyBook::TestRating(string new_rating)
 {
 	int n = 0;
 	n = atoi(new_rating.c_str());
@@ -133,7 +135,7 @@ void MyBook::WriteSentence(string Impression)
 	while (getline( memory, sentence, '.'))
 	{
 		sentence.erase(0, sentence.find_first_not_of(" \t\n\r\f\v"));
-		
+
 		output << sentence << "." << std::endl;
 	}
 
