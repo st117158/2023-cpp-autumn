@@ -1,7 +1,7 @@
 #include "MyBook.h"
 using namespace std;
-SetConsoleCP(1251);
-SetConsoleOutputCP(1251);
+
+
 
 
 void MyBook::inputbook()
