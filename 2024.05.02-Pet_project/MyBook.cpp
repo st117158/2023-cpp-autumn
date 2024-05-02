@@ -134,7 +134,7 @@ void MyBook::WriteSentence(string Impression)
 	{
 		sentence.erase(0, sentence.find_first_not_of(" \t\n\r\f\v"));
 		
-		output << sentence  << std::endl;
+		output << sentence << std::endl;
 	}
 
 	output.close();
