@@ -1,4 +1,4 @@
-#include "MyBook.h"
+ï»¿#include "MyBook.h"
 using namespace std;
 
 
@@ -6,17 +6,17 @@ void MyBook::inputbook()
 
 {
 	std::cin.ignore();
-	std::cout << "Ââåäèòå íàçâàíèå êíèãè: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ½Ð¸Ð³Ð¸: ";
 	getline(std::cin, book_name);
-	std::cout << "Ââåäèòå àâòîðà: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð²Ñ‚Ð¾Ñ€Ð°: ";
 	getline(std::cin, author);
-	std::cout << "Ââåäèòå æàíð: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¶Ð°Ð½Ñ€: ";
 	getline(std::cin, genre);
-	std::cout << "Ââåäèòå âïå÷àòëåíèå: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð¿ÐµÑ‡Ð°Ñ‚Ð»ÐµÐ½Ð¸Ðµ: ";
 	getline(std::cin, impression);
-	std::cout << "Ââåäèòå îïèñàíèå: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ: ";
 	getline(std::cin, descrintion);
-	std::cout << "Îöåíêà ïî äåñÿòèáàëëüíîé øêàëå: ";
+	std::cout << "ÐžÑ†ÐµÐ½ÐºÐ° Ð¿Ð¾ Ð´ÐµÑÑÑ‚Ð¸Ð±Ð°Ð»Ð»ÑŒÐ½Ð¾Ð¹ ÑˆÐºÐ°Ð»Ðµ: ";
 	getline(std::cin, new_rating);
 	rating = TestRating(new_rating);
 };
@@ -27,7 +27,7 @@ string MyBook::TestRating(string new_rating)
 	n = atoi(new_rating.c_str());
 	while (n < 0 || n > 10)
 	{
-		std::cout << "Îöåíêà ïî ÄÅÑßÒÈÁÀËËÜÍÎÉ øêàëå (îò 0 äî 10). Ïîïðîáóéòå åùå ðàç: ";
+		std::cout << "ÐžÑ†ÐµÐ½ÐºÐ° Ð¿Ð¾ Ð”Ð•Ð¡Ð¯Ð¢Ð˜Ð‘ÐÐ›Ð›Ð¬ÐÐžÐ™ ÑˆÐºÐ°Ð»Ðµ (Ð¾Ñ‚ 0 Ð´Ð¾ 10). ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·: ";
 		getline(std::cin,new_rating);
 		n = atoi(new_rating.c_str());
 	}
@@ -61,28 +61,28 @@ void MyBook::readbook(std::ifstream& input)
 void MyBook::PrintBookInfo(std::ostream & out_stream)
 {
 	out_stream << "========================" << std::endl;
-	out_stream << "Àâòîð    : " << author << std::endl;
-	out_stream << "Êíèãà    : " << book_name << std::endl;
-	out_stream << "Îïèñàíèå : " << descrintion << std::endl;
-	out_stream << "Îöåíêà   : " << rating << "/10" << std::endl;
+	out_stream << "ÐÐ²Ñ‚Ð¾Ñ€    : " << author << std::endl;
+	out_stream << "ÐšÐ½Ð¸Ð³Ð°    : " << book_name << std::endl;
+	out_stream << "ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ : " << descrintion << std::endl;
+	out_stream << "ÐžÑ†ÐµÐ½ÐºÐ°   : " << rating << "/10" << std::endl;
 
 }
 
 void MyBook::PrintBookInfo1(std::ostream& out_stream)
 {
 	out_stream << "========================" << std::endl;
-	out_stream << "Àâòîð      : " << author << std::endl;
-	out_stream << "Êíèãà      : " << book_name << std::endl;
-	out_stream << "Îïèñàíèå   : " << descrintion << std::endl;
-	out_stream << "Âïå÷àòëåíèå: " << impression << std::endl;
-	out_stream << "Îöåíêà     : " << rating << "/10" << std::endl;
+	out_stream << "ÐÐ²Ñ‚Ð¾Ñ€      : " << author << std::endl;
+	out_stream << "ÐšÐ½Ð¸Ð³Ð°      : " << book_name << std::endl;
+	out_stream << "ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ   : " << descrintion << std::endl;
+	out_stream << "Ð’Ð¿ÐµÑ‡Ð°Ñ‚Ð»ÐµÐ½Ð¸Ðµ: " << impression << std::endl;
+	out_stream << "ÐžÑ†ÐµÐ½ÐºÐ°     : " << rating << "/10" << std::endl;
 
 }
 
 void MyBook::PrintBookImp(std::ostream& out_stream)
 {
 	out_stream << "========================" << std::endl;
-	out_stream << "Âïå÷àòëåíèå    : " << impression << std::endl;
+	out_stream << "Ð’Ð¿ÐµÑ‡Ð°Ñ‚Ð»ÐµÐ½Ð¸Ðµ    : " << impression << std::endl;
 }
 void MyBook::writebook(std::string _file_name)
 {
@@ -106,21 +106,21 @@ void MyBook::LibraryOut()
 	std::ofstream output("dlitbooks.txt", std::ios::app);
 	if (output.is_open())
 	{
-		output << "~Íàçâàíèå êíèãè: " << std::endl;
+		output << "~ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ½Ð¸Ð³Ð¸: " << std::endl;
 		output << book_name << std::endl;
-		output << "~Àâòîð: " << std::endl;
+		output << "~ÐÐ²Ñ‚Ð¾Ñ€: " << std::endl;
 		output << author << std::endl;
-		output << "~Æàíð: " << std::endl;
+		output << "~Ð–Ð°Ð½Ñ€: " << std::endl;
 		output << genre << std::endl;
-		output << "~Âïå÷àòëåíèå: " << std::endl;
+		output << "~Ð’Ð¿ÐµÑ‡Ð°Ñ‚Ð»ÐµÐ½Ð¸Ðµ: " << std::endl;
 		WriteSentence(impression);
-		output << "~Îïèñàíèå: " << std::endl;
+		output << "~ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ: " << std::endl;
 		WriteSentence(descrintion);
-		output << "~Îöåíêà: " << std::endl;
+		output << "~ÐžÑ†ÐµÐ½ÐºÐ°: " << std::endl;
 		output << rating << "/10" << std::endl;
 		output << " " << std::endl;
 		output.close();
-		std::cout << "Âàøà êíèãà áûëà çàïèñàíà" << std::endl;
+		std::cout << "Ð’Ð°ÑˆÐ° ÐºÐ½Ð¸Ð³Ð° Ð±Ñ‹Ð»Ð° Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð°" << std::endl;
 	}
 }
 
@@ -134,7 +134,7 @@ void MyBook::WriteSentence(string Impression)
 	{
 		sentence.erase(0, sentence.find_first_not_of(" \t\n\r\f\v"));
 		
-		output << sentence << "." << std::endl;
+		output << sentence  << std::endl;
 	}
 
 	output.close();
