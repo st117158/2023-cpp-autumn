@@ -203,9 +203,6 @@ public:
 		getline(std::cin, str);
 	}
 
-
-private:
-
 };
 
 BoookLibrary::BoookLibrary()

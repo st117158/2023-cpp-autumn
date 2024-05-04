@@ -28,10 +28,6 @@ public:
 	void PrintBookInfo(std::ostream & out_stream);
 	void PrintBookInfo1(std::ostream& out_stream);
 	void PrintBookImp(std::ostream& out_stream);
-
-	
-
-	
 };
 
 

@@ -23,6 +23,14 @@ void MyBook::inputbook()
 
 string MyBook::TestRating(string new_rating) 
 {
+	for (char c : new_rating)
+	{
+		if (!std::isdigit(c))
+		{
+			std::cout << "Надо было ввести ЧИСЛО.Число также должно быть в диапазоне от 0 до 10. Попробуйте еще раз: ";
+			getline(std::cin, new_rating);
+		}
+	}
 	int n = 0;
 	n = atoi(new_rating.c_str());
 	while (n < 0 || n > 10)
