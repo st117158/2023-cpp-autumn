@@ -230,7 +230,9 @@ int main(int argc, char* argv[])
 		std::cin >> choice;
 
 		if (!Library.choice(choice))
+		{
 			break;
+		}
 	}
 
 	return 0;
