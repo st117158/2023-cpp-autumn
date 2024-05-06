@@ -23,24 +23,43 @@ void MyBook::inputbook()
 
 string MyBook::TestRating(string new_rating) 
 {
-	for (char c : new_rating)
+	int n = 0;
+	bool validInput = false;
+	while (!validInput)
 	{
-		if (!std::isdigit(c))
+		bool number = true;
+		for (char c : new_rating) 
 		{
-			std::cout << "Надо было ввести ЧИСЛО.Число также должно быть в диапазоне от 0 до 10. Попробуйте еще раз: ";
+			if (!std::isdigit(c)) 
+			{
+				number = false;
+				break;
+			}
+		}
+
+		if (!number)
+		{
+			std::cout << "Надо было ввести ЧИСЛО. Число также должно быть в диапазоне от 0 до 10. Попробуйте еще раз: ";
 			getline(std::cin, new_rating);
 		}
+		else 
+		{
+			n = std::stoi(new_rating);
+			if (n < 0 || n > 10)
+			{
+				std::cout << "Оценка по ДЕСЯТИБАЛЛЬНОЙ шкале (от 0 до 10). Попробуйте еще раз: ";
+				getline(std::cin, new_rating);
+			}
+			else
+			{
+				validInput = true;
+			}
+		}
 	}
-	int n = 0;
-	n = atoi(new_rating.c_str());
-	while (n < 0 || n > 10)
-	{
-		std::cout << "Оценка по ДЕСЯТИБАЛЛЬНОЙ шкале (от 0 до 10). Попробуйте еще раз: ";
-		getline(std::cin,new_rating);
-		n = atoi(new_rating.c_str());
-	}
+
 	return new_rating;
 }
+
 
 string MyBook::split_line(string& input_string)
 {
@@ -55,6 +74,7 @@ string MyBook::split_line(string& input_string)
 	}
 	return token;
 }
+
 void MyBook::readbook(std::ifstream& input)
 {
 	string  line;
@@ -66,32 +86,7 @@ void MyBook::readbook(std::ifstream& input)
 	descrintion = split_line(line);
 	rating = split_line(line);
 }
-void MyBook::PrintBookInfo(std::ostream & out_stream)
-{
-	out_stream << "========================" << std::endl;
-	out_stream << "Автор    : " << author << std::endl;
-	out_stream << "Книга    : " << book_name << std::endl;
-	out_stream << "Описание : " << descrintion << std::endl;
-	out_stream << "Оценка   : " << rating << "/10" << std::endl;
 
-}
-
-void MyBook::PrintBookInfo1(std::ostream& out_stream)
-{
-	out_stream << "========================" << std::endl;
-	out_stream << "Автор      : " << author << std::endl;
-	out_stream << "Книга      : " << book_name << std::endl;
-	out_stream << "Описание   : " << descrintion << std::endl;
-	out_stream << "Впечатление: " << impression << std::endl;
-	out_stream << "Оценка     : " << rating << "/10" << std::endl;
-
-}
-
-void MyBook::PrintBookImp(std::ostream& out_stream)
-{
-	out_stream << "========================" << std::endl;
-	out_stream << "Впечатление    : " << impression << std::endl;
-}
 void MyBook::writebook(std::string _file_name)
 {
 	std::ofstream output(_file_name, std::ios::app);
@@ -107,7 +102,7 @@ void MyBook::writebook(std::string _file_name)
 		output.close();
 	}
 
-};
+}
 
 void MyBook::LibraryOut()
 {
@@ -146,6 +141,33 @@ void MyBook::WriteSentence(string Impression)
 	}
 
 	output.close();
+}
+
+void MyBook::PrintBookInfo(std::ostream& out_stream)
+{
+	out_stream << "========================" << std::endl;
+	out_stream << "Автор    : " << author << std::endl;
+	out_stream << "Книга    : " << book_name << std::endl;
+	out_stream << "Описание : " << descrintion << std::endl;
+	out_stream << "Оценка   : " << rating << "/10" << std::endl;
+
+}
+
+void MyBook::PrintBookInfo1(std::ostream& out_stream)
+{
+	out_stream << "========================" << std::endl;
+	out_stream << "Автор      : " << author << std::endl;
+	out_stream << "Книга      : " << book_name << std::endl;
+	out_stream << "Описание   : " << descrintion << std::endl;
+	out_stream << "Впечатление: " << impression << std::endl;
+	out_stream << "Оценка     : " << rating << "/10" << std::endl;
+
+}
+
+void MyBook::PrintBookImp(std::ostream& out_stream)
+{
+	out_stream << "========================" << std::endl;
+	out_stream << "Впечатление    : " << impression << std::endl;
 }
 
 

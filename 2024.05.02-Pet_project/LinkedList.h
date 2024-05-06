@@ -12,6 +12,13 @@ struct Node
 	Node* next;
 	Node(MyBook* data, Node* next = nullptr) : data(data), next(next) {}
 	Node(const Node& node) : data(node.data), next(nullptr) {}
+	Node(Node&& node) noexcept : data(nullptr), next(nullptr)
+	{
+		data = node.data;
+		next = node.next;
+		node.data = nullptr;
+		node.next = nullptr;
+	}
 	~Node()
 	{
 		data = nullptr;

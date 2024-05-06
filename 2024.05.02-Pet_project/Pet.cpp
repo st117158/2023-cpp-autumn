@@ -9,8 +9,6 @@ using namespace std;
 class BoookLibrary
 {
 public:
-	BoookLibrary();
-	~BoookLibrary();
 	LinkedList books;
 	string library_file_name = "settings.txt";
 
@@ -205,14 +203,6 @@ public:
 
 };
 
-BoookLibrary::BoookLibrary()
-{
-
-}
-
-BoookLibrary::~BoookLibrary()
-{
-}
 
 int main(int argc, char* argv[])
 {
