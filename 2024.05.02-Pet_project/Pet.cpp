@@ -35,9 +35,10 @@ public:
 		std::cout << "0 - Добавить книгу" << std::endl;
 		std::cout << "1 - Поиск по автору" << std::endl;
 		std::cout << "2 - Поиск по жанру" << std::endl;
-		std::cout << "3 - вывести впечатление" << std::endl;
-		std::cout << "4 - отсортировать по рейтингу" << std::endl;
-		std::cout << "5- выход" << std::endl;
+		std::cout << "3 - Вывести впечатление" << std::endl;
+		std::cout << "4 - Отсортировать по рейтингу" << std::endl;
+		std::cout << "5 - Поиск книги по первой букве" << std::endl;
+		std::cout << "6 - Выход" << std::endl;
 		
 	}
 
@@ -119,8 +120,27 @@ public:
 			FindBookByRating(rating); 
 			break;
 		}
-
 		case 5:
+		{
+			std::string letter;
+			std::cout << "Введите букву, с которой начинается имя  книги: ";
+			std::cin.ignore();
+			getline(std::cin, letter);
+			if (letter.length() != 1)
+			{
+				std::cout << "Буква должна быть одна и заглавной. Вам придется перевыбрать пункт в панели меню" << std::endl ;
+				std::cout << "Press any key to continue ... ";
+				string str;
+				getline(std::cin, str);
+			}
+			else
+			{
+				FindBookByName(letter);
+			}
+			break;
+		}
+
+		case 6:
 			return 0;
 		}
 	}
@@ -190,6 +210,24 @@ public:
 		while (tmp != nullptr)
 		{
 			if (tmp->data->rating.find(Rating) != std::string::npos)
+			{
+				tmp->data->PrintBookInfo1(objOstream);
+			}
+			tmp = tmp->next;
+		}
+
+		std::cout << "Press any key to continue ... ";
+		string str;
+		getline(std::cin, str);
+	}
+
+	void FindBookByName(string Letter)
+	{
+		ostream& objOstream = cout;
+		Node* tmp = books.head;
+		while (tmp != nullptr)
+		{
+			if (tmp->data->book_name.find(Letter) == 0)
 			{
 				tmp->data->PrintBookInfo1(objOstream);
 			}

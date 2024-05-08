@@ -133,15 +133,33 @@ void MyBook::WriteSentence(string Impression)
 	std::ofstream output("dlitbooks.txt", std::ios::app);
 	std::string sentence ;
 	std::stringstream memory(Impression);
-	while (getline( memory, sentence, '.'))
+	while (getline(memory, sentence)) 
 	{
 		sentence.erase(0, sentence.find_first_not_of(" \t\n\r\f\v"));
-		
-		output << sentence << std::endl;
+
+		if (sentence.length() > 150) 
+		{
+			for (int i = 0; i < sentence.length(); i += 150)
+			{
+				if (sentence.length() > i + 1 && (sentence[i + 150] != ' ' && sentence[i + 151] != ' '))
+				{
+					output << sentence.substr(i, 150) << "-" << std::endl;
+				}
+				else
+				{
+					output << sentence.substr(i, 150) << std::endl;
+				}
+			}
+		}
+		else 
+		{
+			output << sentence << std::endl;
+		}
 	}
 
 	output.close();
 }
+
 
 void MyBook::PrintBookInfo(std::ostream& out_stream)
 {
