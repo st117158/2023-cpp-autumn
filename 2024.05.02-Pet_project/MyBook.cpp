@@ -143,7 +143,12 @@ void MyBook::WriteSentence(string Impression)
 			{
 				if (sentence.length() > i + 1 && (sentence[i + 150] != ' ' && sentence[i + 151] != ' '))
 				{
-					output << sentence.substr(i, 150) << "-" << std::endl;
+					output << sentence.substr(i, 150) ;
+					if (i + 150 < sentence.length())
+					{
+						output << "-";
+					}
+					output << std::endl;
 				}
 				else
 				{
